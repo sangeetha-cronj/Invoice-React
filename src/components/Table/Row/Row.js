@@ -71,6 +71,7 @@ const Row = (props) => {
                 <td>
                   <button
                     type="submit"
+                    className="btn-edit"
                     onClick={(e) => updateClicked(e, props.values.id)}
                   >
                     update
