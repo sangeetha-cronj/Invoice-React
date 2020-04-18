@@ -1,0 +1,208 @@
+import React, { useState, createContext } from 'react';
+
+export const InvoiceContext = createContext();
+
+export const InvoiceProvider = (props) => {
+  const [invoices, setInvoices] = useState([
+    {
+      id: 1,
+      invoice_no: 'inv-01',
+      client_name: 'John Deo',
+      company_name: 'Abc Limited',
+      submitted: '2020-04-15',
+      amount: 250000,
+    },
+    {
+      id: 2,
+      invoice_no: 'inv-02',
+      client_name: 'Sarsh',
+      company_name: 'Abc Limited',
+      submitted: '2020-03-14',
+      amount: 350000,
+    },
+    {
+      id: 3,
+      invoice_no: 'inv-03',
+      client_name: 'John Deo',
+      company_name: 'Abc Limited',
+      submitted: '2021-04-15',
+      amount: 150000,
+    },
+
+    {
+      id: 4,
+      invoice_no: 'inv-04',
+      client_name: 'maxi',
+      company_name: 'Abc Limited',
+      submitted: '2020-02-12',
+      amount: 280000,
+    },
+    {
+      id: 5,
+      invoice_no: 'inv-05',
+      client_name: 'manu',
+      company_name: 'Abc Limited',
+      submitted: '2020-12-19',
+      amount: 850000,
+    },
+
+    {
+      id: 6,
+      invoice_no: 'inv-06',
+      client_name: 'jessy',
+      company_name: 'Abc Limited',
+      submitted: '2021-04-17',
+      amount: 450000,
+    },
+    {
+      id: 7,
+      invoice_no: 'inv-07',
+      client_name: 'John',
+      company_name: 'Abc Limited',
+      submitted: '2020-02-10',
+      amount: 670000,
+    },
+    {
+      id: 8,
+      invoice_no: 'inv-08',
+      client_name: 'Jim',
+      company_name: 'Abc Limited',
+      submitted: '2020-07-22',
+      amount: 240000,
+    },
+    {
+      id: 9,
+      invoice_no: 'inv-09',
+      client_name: 'vikram',
+      company_name: 'Abc Limited',
+      submitted: '2020-08-12',
+      amount: 260000,
+    },
+    {
+      id: 10,
+      invoice_no: 'inv-10',
+      client_name: 'ayush',
+      company_name: 'Abc Limited',
+      submitted: '2020-01-13',
+      amount: 259000,
+    },
+    {
+      id: 11,
+      invoice_no: 'inv-11',
+      client_name: 'vishal',
+      company_name: 'Abc Limited',
+      submitted: '2020-02-15',
+      amount: 288000,
+    },
+    {
+      id: 12,
+      invoice_no: 'inv-12',
+      client_name: 'ayush',
+      company_name: 'Abc Limited',
+      submitted: '2020-02-15',
+      amount: 780000,
+    },
+    {
+      id: 13,
+      invoice_no: 'inv-13',
+      client_name: 'john',
+      company_name: 'Abc Limited',
+      submitted: '2020-04-25',
+      amount: 660000,
+    },
+    {
+      id: 14,
+      invoice_no: 'inv-14',
+      client_name: 'jelly',
+      company_name: 'Abc Limited',
+      submitted: '2020-06-15',
+      amount: 150000,
+    },
+    {
+      id: 15,
+      invoice_no: 'inv-15',
+      client_name: 'Josh',
+      company_name: 'Abc Limited',
+      submitted: '2022-07-16',
+      amount: 210080,
+    },
+    {
+      id: 16,
+      invoice_no: 'inv-16',
+      client_name: 'max',
+      company_name: 'Abc Limited',
+      submitted: '2021-04-15',
+      amount: 250000,
+    },
+    {
+      id: 17,
+      invoice_no: 'inv-17',
+      client_name: 'joy',
+      company_name: 'Abc Limited',
+      submitted: '2022-08-17',
+      amount: 650000,
+    },
+    {
+      id: 18,
+      invoice_no: 'inv-18',
+      client_name: 'vinay',
+      company_name: 'Abc Limited',
+      submitted: '2023-05-15',
+      amount: 250000,
+    },
+    {
+      id: 19,
+      invoice_no: 'inv-19',
+      client_name: 'Deo',
+      company_name: 'Abc Limited',
+      submitted: '2023-05-17',
+      amount: 250000,
+    },
+    {
+      id: 20,
+      invoice_no: 'inv-20',
+      client_name: 'Josh',
+      company_name: 'Abc Limited',
+      submitted: '2023-07-16',
+      amount: 750000,
+    },
+    {
+      id: 21,
+      invoice_no: 'inv-21',
+      client_name: 'vikram',
+      company_name: 'Abc Limited',
+      submitted: '2022-06-15',
+      amount: 258000,
+    },
+    {
+      id: 22,
+      invoice_no: 'inv-22',
+      client_name: 'John',
+      company_name: 'Abc Limited',
+      submitted: '2022-04-15',
+      amount: 290000,
+    },
+    {
+      id: 23,
+      invoice_no: 'inv-23',
+      client_name: 'Josh',
+      company_name: 'Abc Limited',
+      submitted: '2024-06-17',
+      amount: 270000,
+    },
+    {
+      id: 24,
+      invoice_no: 'inv-24',
+      client_name: 'gimmy',
+      company_name: 'Abc Limited',
+      submitted: '2020-04-25',
+      amount: 450000,
+    },
+  ]);
+
+  return (
+    <InvoiceContext.Provider value={[invoices, setInvoices]}>
+      {props.children}
+    </InvoiceContext.Provider>
+  );
+};
